@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="截至到for循环，最后一次编辑时间：25&#x2F;6&#x2F;8  字面量字面量，代码中的固定值  ，如下 123x &#x3D; 123 y &#x3D; 12.5z &#x3D; &#x27;what?&#x27; 格式：变量名 &#x3D; 变量值 注释单行注释：# 单行注释，记得开头空1格多行注释： 12345&quot;&quot;&quot;1.2. 这是多行注释  3.&quot;&quot;&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础-1">
+<meta property="og:url" content="http://example.com/2025/12/21/%E5%9F%BA%E7%A1%80-1/index.html">
+<meta property="og:site_name" content="拾光机">
+<meta property="og:description" content="截至到for循环，最后一次编辑时间：25&#x2F;6&#x2F;8  字面量字面量，代码中的固定值  ，如下 123x &#x3D; 123 y &#x3D; 12.5z &#x3D; &#x27;what?&#x27; 格式：变量名 &#x3D; 变量值 注释单行注释：# 单行注释，记得开头空1格多行注释： 12345&quot;&quot;&quot;1.2. 这是多行注释  3.&quot;&quot;&quot;">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-12-21T13:33:15.000Z">
+<meta property="article:modified_time" content="2025-12-21T13:39:26.269Z">
+<meta property="article:author" content="蔚蓝海月">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+
+<title >基础-1</title>
+
+<!-- Favicon -->
+
+    <link href='/img/8.svg?v=2.2.7' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/8.svg?v=2.2.7' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"蔚蓝海月","root":"/","typed_text":null,"theme_version":"2.2.7","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/8.svg","icon16":"/img/8.svg","icon32":"/img/8.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"12/21/2025 14:00:00","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-12-21 21:39:26"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.7" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/8.svg">
+    
+    
+        <div class="trm-logo-text">
+            蔚蓝<span>海月</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="https://pic1.zhimg.com/v2-b3c2c6745b9421a13a3c4706b19223b3_r.jpg">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Hi my new friend!
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            基础-1
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2025
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/./img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        蔚蓝海月
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/wertax45" title="github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                地址:
+            </div>
+            <div class="trm-label trm-label-light">
+                火星
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:qix86599@gmail.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            12/21
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            21:33
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            蔚蓝海月
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <blockquote>
+<p>截至到for循环，最后一次编辑时间：25&#x2F;6&#x2F;8</p>
+</blockquote>
+<h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><p>字面量，代码中的固定值  ，如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">123</span> </span><br><span class="line">y = <span class="number">12.5</span></span><br><span class="line">z = <span class="string">&#x27;what?&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>格式：变量名 &#x3D; 变量值</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>单行注释：<code># 单行注释，记得开头空1格</code><br>多行注释：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">1.</span></span><br><span class="line"><span class="string">2. 这是多行注释  </span></span><br><span class="line"><span class="string">3.</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>三种基本的数据类型：string, int, float</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;???&quot;</span>)<span class="comment"># 1.字符串  </span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">123</span>)<span class="comment"># 2.int  </span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">3.1415926</span>)<span class="comment"># 3.浮点数  </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;one line&quot;</span>,end=<span class="string">&#x27;&#x27;</span>)<span class="comment"># 使用end=&#x27;&#x27;来取消换行  </span></span><br></pre></td></tr></table></figure>
+
+<p>使用type()来查看数据类型 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="string">&quot;123&quot;</span>)) <span class="comment"># 使用type()来查看括号内的数据类型  </span></span><br><span class="line">whats_TYPE_is_this = <span class="number">123</span>  </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(whats_TYPE_is_this)) <span class="comment"># 另一种用法  </span></span><br><span class="line">is_this_int = <span class="built_in">type</span>(<span class="number">123</span>)  </span><br><span class="line"><span class="built_in">print</span>(is_this_int)  </span><br></pre></td></tr></table></figure>
+
+<p>其他数据类型：</p>
+<p>图先欠着</p>
+<h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3><p>与C&#x2F;C++一样，PY可以使用自带的强制类型转换<br>基本数据类型：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>(x)  </span><br><span class="line"><span class="built_in">str</span>(x)  </span><br><span class="line"><span class="built_in">float</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>其他类型：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bool</span>(x)<span class="comment"># 转换为布尔值</span></span><br><span class="line"><span class="built_in">list</span>(x)<span class="comment"># 转换为列表</span></span><br><span class="line"><span class="built_in">tuple</span>(x)<span class="comment"># 转换为元组</span></span><br><span class="line"><span class="built_in">set</span>(x)<span class="comment"># 转换为集合</span></span><br><span class="line"><span class="built_in">dict</span>(x)<span class="comment"># 转换为字典</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>标识符可以是下面的样子：<br>A   _A   _a1   a1  变量1</p>
+<p>数字不能在前，区分大小写<br>![[屏幕截图 2025-02-25 223043.png]]</p>
+<p>Python 的关键词（也称为保留字）是语言中具有特殊含义的单词，不能用作变量名、函数名或其他标识符。<br>完整关键词列表：[[python关键词表]]</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>7种数学运算：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+，-，*，/  </span><br><span class="line">//求整数，**求指数，%求余数  </span><br></pre></td></tr></table></figure>
+
+<p>对应7种赋值运算符：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+=，-=，*=，/=，//=，**=，%= </span><br></pre></td></tr></table></figure>
+
+
+<p>运算符使用例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="number">1</span>  </span><br><span class="line">s = s + <span class="number">3</span><span class="comment"># or  </span></span><br><span class="line">s += <span class="number">3</span><span class="comment"># they are the same  </span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="字符串的三种定义方式"><a href="#字符串的三种定义方式" class="headerlink" title="字符串的三种定义方式"></a>字符串的三种定义方式</h3><p>字符串有3种定义法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&quot;&quot;&quot;HI&quot;&quot;&quot;</span></span><br><span class="line">s2 = <span class="string">&quot;hello?&quot;</span></span><br><span class="line">s3 = <span class="string">&#x27;well...&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p> 使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">p1 = <span class="string">&quot;&quot;&quot;Hmmm&quot;&quot;&quot;</span>  </span><br><span class="line">p2 = <span class="string">&#x27; say &quot;HI&quot; to him.&#x27;</span><span class="comment"># 使用&#x27;&#x27;以打印&quot;&quot;  </span></span><br><span class="line">p3 = <span class="string">&quot; \&quot;\&quot;nope? well...  &quot;</span><span class="comment"># 使用\以取消&quot;的功能  </span></span><br><span class="line">p4 = <span class="string">&quot; It&#x27;s fine.&quot;</span>  </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(p1,p2,p3,p4)<span class="comment"># 在同一行的多项输出  </span></span><br></pre></td></tr></table></figure>
+<p> python的输出自带回车</p>
+<p>连接字符串 &#x2F; 拼接字符串：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;pop&quot;</span> + <span class="string">&quot; up!&quot;</span>)<span class="comment"># 字符串用 + 连接  </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;pop &quot;</span> + p1 + <span class="string">&quot; out&quot;</span>)<span class="comment"># 可以连接字符串变量  </span></span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h3><p>格式化字符串，可以使用占位的方法格式化输出，与C&#x2F;C++的格式化输出相同</p>
+<p>格式符分别为：%s字符串 , %f浮点数 , %d整数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">t1 = <span class="number">9</span>  </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;It&#x27;s %s&quot;</span> % t1 + <span class="string">&quot;AM&quot;</span>)<span class="comment"># 使用%s来占位，以输出非字符串类型的数据  </span></span><br><span class="line"></span><br><span class="line">n1 = <span class="number">2</span>  </span><br><span class="line">n2 = <span class="number">1</span>  </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;We have %s friends comes from the %s area. &quot;</span> % (n1,n2))<span class="comment"># 数字将被 转为 字符串并输出  </span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="字符串格式化精度控制"><a href="#字符串格式化精度控制" class="headerlink" title="字符串格式化精度控制"></a>字符串格式化精度控制</h3><p>输出精度控制：  </p>
+<p>%5d<br>跟C&#x2F;C++一样，但当数字大于5时，格式不生效  </p>
+<p>%5.3f<br>还是C &#x2F;C++ </p>
+<p>%.2f<br>小数超出的部分会<em>四舍五入</em></p>
+<p>另一种格式化字符串的办法（原样输出）：<br>f”{变量名}”  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p5 = <span class="number">123</span>  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;We have <span class="subst">&#123;p5&#125;</span> apples.&quot;</span>)  </span><br></pre></td></tr></table></figure>
+
+<p>格式化输出也可以从表达式入手，不再使用变量<br>下面是 格式化表达式 的写法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1 * 1 = %d&quot;</span> % (<span class="number">1</span>*<span class="number">1</span>))  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;2 * 1 = <span class="subst">&#123;<span class="number">2</span> * <span class="number">1</span>&#125;</span>&quot;</span>)  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;string type : %s&quot;</span> % <span class="built_in">type</span>(<span class="string">&quot;any str here&quot;</span>))<span class="comment"># type()的结果是字符串类型哦  </span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="数据输入（input语句）"><a href="#数据输入（input语句）" class="headerlink" title="数据输入（input语句）"></a>数据输入（input语句）</h3><p>输入 ：input()  </p>
+<p>可以将提示信息放入input()中<br>input()会将输入的所有信息转为字符串处理，如需要其他类型需要手动转换 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="built_in">input</span>(<span class="string">&quot;enter your name pls:&quot;</span>)  </span><br><span class="line">name = <span class="built_in">str</span>(name)<span class="comment"># 输入的类型为str  </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;good to see you, %s&quot;</span> % name)  </span><br><span class="line"></span><br><span class="line">day = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;What&#x27;s your lucky number?&quot;</span>))<span class="comment"># 将输入的str类型转换为int</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Nice pick!&quot;</span>)  </span><br></pre></td></tr></table></figure>
+
+<h3 id="布尔类型与比较运算符"><a href="#布尔类型与比较运算符" class="headerlink" title="布尔类型与比较运算符"></a>布尔类型与比较运算符</h3><p>布尔类型可以通过 直接赋值 或进行 比较运算 来得到<br>x &#x3D; True  or  x &#x3D; 1 &lt; 2 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b1 = <span class="number">1</span>&lt;<span class="number">2</span>  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;b1 = <span class="subst">&#123;<span class="built_in">type</span>(b1)&#125;</span>&quot;</span>)  </span><br></pre></td></tr></table></figure>
+<p>输出为bool</p>
+<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>python的if是通过<strong>缩进</strong>来判断归属的，4个空格 else 同理<br>多个条件可以使用elif，（就像switch）</p>
+<p><strong>if-else格式：</strong><br>if 条件:<br>    执行语句1<br>else<br>    执行语句2</p>
+<p><strong>if-elif-else格式：</strong><br>if 条件1:<br>    执行语句1<br>    …<br>elif 条件2:<br>    执行语句1<br>    …<br>elif 条件3:<br>    执行语句1<br>    …<br>else 条件都不满足时的执行语句    # 如果不写else，则elif &#x3D;&#x3D; if </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> name == <span class="string">&quot;NULL&quot;</span>:  </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;well?&quot;</span>)  </span><br><span class="line"><span class="keyword">else</span>:  </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;whatever&quot;</span>)  </span><br></pre></td></tr></table></figure>
+
+<p>程序案例：nope</p>
+<h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p>格式：<br>while 循环条件:<br>    执行的语句，需要缩进</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span>  </span><br><span class="line"><span class="keyword">while</span> i&lt;<span class="number">100</span>:  </span><br><span class="line">    i += <span class="number">1</span>  </span><br></pre></td></tr></table></figure>
+
+<p>程序案例：nope</p>
+<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><p>格式：<br>for 临时变量 in 数据集&#x2F;序列类型:<br>    执行代码1</p>
+<p>for 无法定义循环条件，只能被动取出数据处理</p>
+<p>案例，找出字符串中a的数量：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">word = <span class="string">&quot;Would you have let me if I asked?&quot;</span>  </span><br><span class="line">x = <span class="number">0</span>  </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> word:  </span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">&quot;a&quot;</span>:<span class="comment"># 找出字符串中a的数量  </span></span><br><span class="line">        x += <span class="number">1</span>  </span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p><strong>基本定义</strong><br>Python 提供了两种循环结构：  </p>
+<ul>
+<li><code>while</code> 循环：通过<strong>自定义条件</strong>控制循环  </li>
+<li><code>for</code> 循环：通过<strong>轮询机制</strong>对内容进行<strong>逐个处理</strong></li>
+</ul>
+</li>
+<li><p><strong>for循环本质</strong><br> “for循环就是将‘待办事项’逐个完成的循环机制”</p>
+</li>
+<li><p><strong>运行流程</strong>  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[开始循环] --&gt; B&#123;是否有下一个元素？&#125;</span><br><span class="line">B --&gt;|是| C[处理当前元素]</span><br><span class="line">C --&gt; B</span><br><span class="line">B --&gt;|否| D[结束循环]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>关键特性</strong>  </p>
+<ul>
+<li>自动遍历可迭代对象（如数字序列 <code>1→2→3→4→5→6</code>）</li>
+<li>无需手动维护计数器</li>
+<li>内置终止检测机制</li>
+</ul>
+</li>
+</ol>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2025/12/21/%E5%9F%BA%E7%A1%80-2/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/./img/blog_cover_img/py1.png">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/python/">
+                    python
+                </a>
+            </div>
+            <h5>
+                <a href="/2025/12/21/%E5%9F%BA%E7%A1%80-2/" class="trm-anima-link">
+                    基础-2
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>25/12/21</li>
+                <li>21:30</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.7
+            </span>
+        </div>
+      
+
+    
+        <div class="trm-footer-item blog-run-long"></div>
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.7"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>
