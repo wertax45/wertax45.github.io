@@ -106,7 +106,7 @@
   --notice-outdate-bg: #403131;
   --notice-outdate-color: #ff6565;
   --notice-outdate-border: #bb1e1e;
-  --scroll-progress-bg-color: linear-gradient(#82df7a80, #82df7a80);
+  --scroll-progress-bg-color: linear-gradient(#7adfd780, #7abadf80);
   --selection-bg-color: #f1f1f1;
   --selection-color: #1f2d3d;
 }
@@ -3502,7 +3502,7 @@ figure.highlight .code-expand-btn svg {
   --highlight-aqua: #39adb5;
   --highlight-red: #e53935;
   --highlight-orange: #f76d47;
-  --highlight-green: #91b859;
+  --highlight-green: #3ddc84;
   --highlight-blue: #6182b8;
 }
 :root.dark {
