@@ -882,7 +882,7 @@ html.is-animating .trm-swup-animation {
   line-height: 80px;
   color: var(--theme-color, #00283a);
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;/*！！！*/
   letter-spacing: 2px;
   font-weight: 700;
   transition: all 0.4s ease-in-out;
@@ -1413,6 +1413,11 @@ blockquote:after {
   z-index: 2;
   transform: translateY(-410px);
 }
+
+.trm-main-card {
+  margin-left: -70px;/*有问题就删了这个*/
+}
+
 .trm-main-card-frame .trm-main-card {
   display: flex;
   flex-direction: column;
@@ -1437,6 +1442,7 @@ blockquote:after {
   background-color: var(--theme-bg-color, #fcfcfe);
   border-radius: 5px 5px 0 0;
   opacity: 0.3;
+  margin-left: -70px;/*有问题就删了这个*/
 }
 .trm-main-card-frame .trm-main-card .trm-social {
   display: flex;
@@ -2388,6 +2394,11 @@ form textarea:focus,
     height: 350px;
     border-radius: 0 0 10px 10px;
   }
+
+  .trm-banner-text {
+    margin-bottom: -30px;/*！！！！*/
+  }
+
   .trm-banner .trm-banner-cover {
     top: 0;
     height: 100%;
@@ -3725,4 +3736,8 @@ pre .coffeescript .title {
 .trm-fixed-container.offset #trm-back-top {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+span#scroll-triger {
+  margin-bottom: -60px;/*！！！*/
 }
