@@ -34,7 +34,7 @@
   --primary-weak-50: rgba(51, 129, 202, 0.5);
   --body-color: #5d5d5e;
   --body-color-5: rgba(93, 93, 94, 0.05);
-  --body-bg-color: #00151f;
+  --body-bg-color: #f0f5f7;
   --theme-color: #00283a;
   --theme-bg-color: #fcfcfe;
   --theme-bg-color-80: rgba(252, 252, 254, 0.8);
@@ -3740,4 +3740,8 @@ pre .coffeescript .title {
 
 span#scroll-triger {
   margin-bottom: -60px;/*！！！*/
+}
+
+.trm-banner-text {
+  margin-bottom: -25px;/*！！！*/
 }
